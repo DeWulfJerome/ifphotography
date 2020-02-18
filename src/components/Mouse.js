@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 
 const Dot = styled.canvas`
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -16,11 +16,11 @@ const Mouse = ({ props }) => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    setWindowWidth(window.innerWidth);
-    setWindowHeight(window.innerHeight);
+    setWindowWidth(window.outerWidth);
+    setWindowHeight(window.outerHeight);
     const handleResize = e => {
-      setWindowWidth(e.currentTarget.innerWidth);
-      setWindowHeight(e.currentTarget.innerHeight);
+      setWindowWidth(e.currentTarget.outerWidth);
+      setWindowHeight(e.currentTarget.outerHeight);
     };
     window.addEventListener("resize", handleResize);
   }, []);
