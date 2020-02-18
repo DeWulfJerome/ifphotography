@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import "./App.css";
+
+import StyleConstants from "./StyleConstants";
+
+import Header from "./components/header/Header";
+import CoverRow from "./components/cover/CoverRow";
+import TitleRow from "./components/title/TitleRow";
+import MouseTracker from "./components/HOC/MouseTracker";
+import Mouse from "./components/Mouse";
+
+const ColoredDiv = styled.div`
+  width: 100vw;
+  height: 40vh;
+  background-color: ${StyleConstants.colors.blue.dark};
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MouseTracker
+      render={props => (
+        <>
+          <Header></Header>
+          <TitleRow></TitleRow>
+          <CoverRow></CoverRow>
+          <Mouse props={props}></Mouse>
+        </>
+      )}
+    >
+      } >
+    </MouseTracker>
   );
 }
 
