@@ -12,8 +12,8 @@ const TitleText = styled.h1`
   line-height: 0.7em;
 `;
 
-const Title = ({ children }) => {
-  return <TitleText>{children}</TitleText>;
+const Title = ({ children, refProp }) => {
+  return <TitleText ref={refProp}>{children}</TitleText>;
 };
 
 export default Title;

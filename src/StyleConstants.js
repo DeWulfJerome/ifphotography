@@ -1,7 +1,7 @@
 const StyleConstants = {
   colors: {
     blue: {
-      dark: "#0F4350"
+      dark: "#1B2027"
     }
   }
 };

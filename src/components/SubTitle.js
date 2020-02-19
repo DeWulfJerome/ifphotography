@@ -11,7 +11,7 @@ const SubTitle = ({ children }) => {
 
   useLayoutEffect(() => {
     const ctx = canvasRef.current.getContext("2d");
-    ctx.font = "500 5.5em Roboto";
+    ctx.font = "500 5.5em Open Sans";
     ctx.strokeStyle = "#fff";
     ctx.strokeText(children.toUpperCase(), 10, 80);
   }, [canvasRef, children]);
